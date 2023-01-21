@@ -1,3 +1,4 @@
+import tkinter
 from pytube import YouTube
 
 
@@ -9,7 +10,7 @@ def download(link):
     except:
         print("An error has occurred")
     print("Download is completed successfully")
+dlink = input("url"):
+download(dlink)
 
 
-link = input("Enter the YouTube video URL: ")
-download(link)
