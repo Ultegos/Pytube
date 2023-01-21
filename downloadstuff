@@ -1,11 +1,19 @@
+"""provides utils for downloader ."""
+from tkinter import messagebox
 from pytube import YouTube
-def download(link):
-    youtubeObject = YouTube(link)
-    youtubeObject = youtubeObject.streams.get_highest_resolution()
+from pytube.exceptions import RegexMatchError
+
+
+link = input("input youtube video link here")
+def download():
+    """defines download for loop"""
+    youtubeobject = YouTube(link)
+    youtubeobject = youtubeobject.streams.get_highest_resolution()
     try:
-        youtubeObject.download()
-    except EOFError:
-        print("An error has occurred")
-link = input()
-download(link)
-ifTrue: print("x")
+        youtubeobject.download()
+    except RegexMatchError as e:
+        messagebox.showerror('Something went wrong...', e)
+        print('e')
+
+
+download()
