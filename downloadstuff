@@ -4,8 +4,8 @@ def download(link):
     youtubeObject = youtubeObject.streams.get_highest_resolution()
     try:
         youtubeObject.download()
-    except:
+    except EOFError:
         print("An error has occurred")
-dlink = input("url")
-download(dlink) 
-print("Download is completed successfully")
+link = input()
+download(link)
+ifTrue: print("x")
