@@ -1,7 +1,4 @@
-import tkinter
 from pytube import YouTube
-
-
 def download(link):
     youtubeObject = YouTube(link)
     youtubeObject = youtubeObject.streams.get_highest_resolution()
@@ -9,8 +6,6 @@ def download(link):
         youtubeObject.download()
     except:
         print("An error has occurred")
-    print("Download is completed successfully")
-dlink = input("url"):
-download(dlink)
-
-
+dlink = input("url")
+download(dlink) 
+print("Download is completed successfully")
