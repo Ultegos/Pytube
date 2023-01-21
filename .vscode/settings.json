@@ -1,4 +1,11 @@
 {
     "python.analysis.autoImportCompletions": true,
-    "python.analysis.completeFunctionParens": true
+    "python.analysis.completeFunctionParens": true,
+    "python.globalModuleInstallation": true,
+    "debug.allowBreakpointsEverywhere": true,
+    "debug.autoExpandLazyVariables": true,
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName}${separator}${remoteName}",
+    "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true,
+    "breadcrumbs.showVariables": false
+    
 }
