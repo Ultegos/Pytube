@@ -10,10 +10,10 @@ def download():
     youtubeobject = YouTube(link)
     youtubeobject = youtubeobject.streams.get_highest_resolution()
     try:
-        youtubeobject.download()
-    except RegexMatchError as e:
-        messagebox.showerror('Something went wrong...', e)
-        print('e')
-
+        youtubeobject.download()  
+    except: 
+        pytube.exceptions.RegexMatchError = messagebox.showerror('Something went wrong...', e) 
+        print(e)
 
 download()
+print('done')
